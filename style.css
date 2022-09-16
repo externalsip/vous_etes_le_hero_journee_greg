@@ -1,0 +1,103 @@
+*{box-sizing: border-box;
+    font-family:prompt;
+}
+
+body{
+
+    background-color:#2f195f ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+}
+
+.game{
+
+    display:flex;
+
+    flex-direction: column;
+
+    width:900px;
+
+    min-height: 100px;
+    
+    background-color:#5603ad ;
+
+    justify-content: center;
+
+}
+
+.title{
+
+    font-size: 3em;
+
+    font-family: Indie Flower;
+
+    color:#bcb6ff;
+
+    align-self: center;
+
+}
+
+.chapter{
+
+    font-size: 2em;
+    
+    color:#bcb6ff;
+
+    align-self: center;
+}
+
+.text{
+
+    color:#bcb6ff;
+
+    font-size:1em;
+
+    margin-left:30px;
+
+    margin-right:30px;
+
+}
+
+.photo{
+
+    max-width:100%;
+
+    margin:30px;
+
+}
+
+.button_wrapper{
+
+    width:100%;
+
+    align-self: stretch;
+
+    display:flex;
+
+    justify-content: space-evenly;
+
+    align-items: flex-start;
+
+    margin-bottom: 30px;
+
+}
+
+.button{
+
+    width:25%;
+
+    color:#007ea7;
+
+    font-size:1em;
+
+    background-color:#d0fef5 ;
+}
+
+.button:hover{
+
+background-color:#A9CFC7
+
+}
