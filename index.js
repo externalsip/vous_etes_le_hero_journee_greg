@@ -153,7 +153,61 @@ let chaptersObj = {
     },
     problemes: {
         subtitle: "Problème après problème",
-        text: "Maintenant rendu à la fin de son shift, l'ordinateur de Greg commence à faire des étincelles, d'après l'opinion de Greg, ce n'est pas quelque chose que les ordinateurs font habituellement"
+        text: "Maintenant rendu à la fin de son shift, l'ordinateur de Greg commence à faire des étincelles, d'après l'opinion de Greg, ce n'est pas quelque chose que les ordinateurs font habituellement",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('reparation')"
+        }],
+    },
+    reparation: {
+        subtitle: "Réparation",
+        text: "Greg décide d'essayer de réparer le problème, comment va-t-il s'y prendre?",
+        options: [explosion = {
+            text: "Ouvrir l'ordinateur",
+            action: "goToChapter('explosion')"
+        }, ignorer = {
+            text: "Ignorer le problème",
+            action: "goToChapter('depart')",
+        }, coup = {
+            text: "Donner un coup de pied",
+            action: "goToChapter('bris')"
+        }],
+    },
+    explosion: {
+        subtitle: "???",
+        text: "Dès que Greg commence à s'approcher de l'ordinateur, celui-ci explose. Malheureusement Greg n'avait pas prévu son fameux kit de survie pour explosions à moins de 2 pieds de lui.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    bris: {
+        subtitle: "Un autre problème pour les techniciens",
+        text: "Greg décide que la meilleur façon de réparer le problème est avec la bonne vielle force brutte, l'ordinateur n'est pas d'accord, en tout cas, c'est ce qu'on peut assumer comme il a cessé de fonctionner. Greg s'en va sans dire un mot.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    depart: {
+        subtitle: "Pas mon problème",
+        text: "Le Greg d'aujourd'hui en a eu assez, ce problème va être le problème du Greg de demain, Greg part de son bureau, laissant l'ordinateur là.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('incendie')"
+        }],
+    },
+    incendie: {
+        subtitle: "Pas ma faute",
+        text: "Greg arrive chez lui et vois à la télévision que son bureau a passé au feu suite à l'explosion d'un ordinateur, Greg se demande qui est l'étourdit qui a laissé cela arrivé.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('repos')"
+        }],
+    },
+    repos: {
+        subtitle: "Juste une autre journée",
+        text: ""
 
     }
 
