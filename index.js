@@ -229,7 +229,7 @@ let chaptersObj = {
             action: "goToChapter('bureau')"
         }, lune = {
             text: "Aller sur la lune",
-            action: "goToChapter('nasa')",
+            action: "goToChapter('coupdetete')",
         }, asphalte = {
             text: "Ne rien faire",
             action: "goToChapter('asphalte')"
@@ -252,9 +252,74 @@ let chaptersObj = {
         }],
     },
     aprescombat: {
-        subtitle: "Rien ne se passe"
-
-
+        subtitle: "Rien ne se passe",
+        text: "Greg triomphe de tout ses collègues, même son patron n'était pas de taille devant l'individu qu'est Greg, après tout il faisait parti de l'équipe de football à l'université, Greg va s'asseoir à son bureau et attend que quelque chose se passe, mais rien n'arrive, ce qui n'est pas surprenant comme il est la seule personne encore debout dans le bureau.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    asphalte: {
+        subtitle: "Devient qu'un avec l'asphalte",
+        text: "Greg ne trouve rien à faire, il décide que si il ne va rien faire, il va le faire mieux que qui que ce soit, Greg reste immobile assez longtemps pour que ses pieds fusionnent avec le sol.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    coupdetete: {
+        subtitle: "La lune ou rien",
+        text: "C'est décidé, Greg va passer son congé sur la lune, peu importe ce qu'il doit faire pour y arriver.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('nasa')"
+        }],
+    },
+    nasa: {
+        subtitle: "Vers l'espace",
+        text: "Greg se déplace d'une manière ou une autre à la NASA, où il demande un voyage en fusée, bien sûr, il est refusé, maintenant en dehors du bâtiment, que devrait faire Greg?",
+        options: [vol = {
+            text: "Voler jusqu'à la lune",
+            action: "goToChapter('preparation')"
+        }, lune = {
+            text: "S'infiltrer dans une fusée",
+            action: "goToChapter('infiltration')",
+        }, asphalte = {
+            text: "Ne rien faire",
+            action: "goToChapter('abandon')"
+        }],
+    },
+    infiltration: {
+        subtitle: "Mission échouée",
+        text: "Greg réussi à se rendre à bord de la fusée, mais dans un moment d'inatention il commence a avoir une conversation avec un des astronautes, celui-ci se rend compte que Greg n'est pas sensé être là, et c'est comme ça que Greg fini en cours",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    abandon: {
+        subtitle: "Rien",
+        text: "Greg peut bien penser à une solution aussi fort que possible, rien ne lui viens en tête, il est forcé d'abandonner et retourner chez lui.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    preparation: {
+        subtitle: "Préparation au décolage",
+        text: "Si Greg ne peut pas aller dans une fusée, il va s'y rendre lui même, il commence à inspirer tout l'oxygène dans un énorme rayon autours de lui, et commence à gonfler, on peut entendre des os briser sous la pression, et tout cette expérience paraît extrêmement douloureuse, mais Greg n'a pas l'air d'être dérangé, il se met éventuellement à flôter, en route vers la lune.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('lune')"
+        }],
+    },
+    lune: {
+        subtitle: "Succès",
+        text: "Greg est maintenant sur la lune, où il risque de passer le restant de ses jours car retourner sur terre risque d'être très compliqué.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
     }
 
 

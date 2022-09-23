@@ -94,6 +94,8 @@ body{
     font-size:1em;
 
     background-color:#d0fef5 ;
+
+    border-radius: 10px;
 }
 
 .button:hover{
