@@ -207,10 +207,55 @@ let chaptersObj = {
     },
     repos: {
         subtitle: "Juste une autre journée",
-        text: ""
+        text: "Greg s'en va se coucher sur le plancher, tel est sa tradition, il va probablement devoir se trouver un nouvel emploi, mais honnêtement, cela ne le dérange pas tant que cela.",
+        options: [recommencer = {
+            text: "Recommencer",
+            action: "goToChapter('introduction')"
+        }],
+    },
+    erreur: {
+        subtitle: "Erreur humaine",
+        text: "Alors que Greg s'apprête à entrer dans son bureau, il réalise quelque chose, il ne travaille pas aujourd'hui, mais demain. Il a fait tout ce chemin pour rien, Greg sort du bureau.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('conge')"
+        }],
+    },
+    conge: {
+        subtitle: "Quoi faire?",
+        text: "Maintenant que Greg a réalisé qu'il a congé, il essai de trouver quelque chose à faire de celui-ci.",
+        options: [travail = {
+            text: "Aller au travail",
+            action: "goToChapter('bureau')"
+        }, lune = {
+            text: "Aller sur la lune",
+            action: "goToChapter('nasa')",
+        }, asphalte = {
+            text: "Ne rien faire",
+            action: "goToChapter('asphalte')"
+        }],
+    },
+    bureau: {
+        subtitle: "On repart pour... un tour?",
+        text: "Greg décide que même si il ne travaille pas aujourd'hui, cela ne l'empêche pas d'aller travailler.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('combat')"
+        }],
+    },
+    combat: {
+        subtitle: "Le combat pour le bureau de Greg",
+        text: "Lorsqu'il entre dans le bureau, tout le monde se tourne vers Greg, il ne travaille pas aujourd'hui, et se présenter alors qu'on ne travaille pas est puni par la mort. Greg observe tout ses collègues lâcher tout ce qu'ils faisaient et lui faire face, et tout à coup, ils se mettent à courir vers lui, Greg sais ce qu'il ce passe et ne les laissera pas l'exécuter ainsi.",
+        options: [continuer = {
+            text: "Continuer",
+            action: "goToChapter('aprescombat')"
+        }],
+    },
+    aprescombat: {
+        subtitle: "Rien ne se passe"
+
 
     }
-
 
 
 };
