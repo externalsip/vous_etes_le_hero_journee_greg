@@ -332,5 +332,5 @@ function goToChapter(chapterName){
 
     console.log(chaptersObj[chapterName]["options"]);
 
-}
+}w
 
