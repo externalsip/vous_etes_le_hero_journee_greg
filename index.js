@@ -324,13 +324,34 @@ let chaptersObj = {
 
 
 };
+
+let chapterTitle = document.querySelector(".chapter");
+let chapterText = document.querySelector(".text");
+let chapterImg = document.querySelector(".photo");
+let button = document.querySelectorAll(".button");
+
 function goToChapter(chapterName){
 
-    console.log(chaptersObj[chapterName]["subtitle"]);
+    chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
+    chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
+    chapterImg.src = (chaptersObj[chapterName]["img"]);
+    for(let i = 0; i <= 2; i++){
 
-    console.log(chaptersObj[chapterName]["text"]);
+        if(chaptersObj[chapterName]["options"][i] != undefined){
 
-    console.log(chaptersObj[chapterName]["options"]);
+        button[i].innerHTML = ((chaptersObj[chapterName]["options"][i].text));
+        button[i].setAttribute("onclick", ((chaptersObj[chapterName]["options"][i].action)));
 
-}w
+        }
+    else{
 
+        button[i].classList.add("none");
+
+    }
+    }
+
+
+
+};
+
+goToChapter("introduction")
