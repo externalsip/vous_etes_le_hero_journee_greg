@@ -354,4 +354,4 @@ function goToChapter(chapterName){
 
 };
 
-goToChapter("introduction")
+goToChapter("introduction");
