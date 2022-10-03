@@ -225,6 +225,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('repos')"
         }],
+        img: "assets/images/incendie.webp",
     },
     repos: {
         subtitle: "Juste une autre journée",
@@ -233,6 +234,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/repos.jpg",
     },
     erreur: {
         subtitle: "Erreur humaine",
@@ -241,6 +243,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('conge')"
         }],
+        img: "assets/images/erreur.webp",
     },
     conge: {
         subtitle: "Quoi faire?",
@@ -255,6 +258,7 @@ let chaptersObj = {
             text: "Ne rien faire",
             action: "goToChapter('asphalte')"
         }],
+        img: "assets/images/conge.jpg",
     },
     bureau: {
         subtitle: "On repart pour... un tour?",
@@ -263,6 +267,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('combat')"
         }],
+        img: "assets/images/bureau.jpg",
     },
     combat: {
         subtitle: "Le combat pour le bureau de Greg",
@@ -280,6 +285,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/aprescombat.jpg",
     },
     asphalte: {
         subtitle: "Devient qu'un avec l'asphalte",
@@ -288,6 +294,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/asphalte.jpg",
     },
     coupdetete: {
         subtitle: "La lune ou rien",
@@ -296,6 +303,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('nasa')"
         }],
+        img: "assets/images/coupdetete.jpg",
     },
     nasa: {
         subtitle: "Vers l'espace",
@@ -310,6 +318,7 @@ let chaptersObj = {
             text: "Ne rien faire",
             action: "goToChapter('abandon')"
         }],
+        img: "assets/images/nasa.jpg",
     },
     infiltration: {
         subtitle: "Mission échouée",
@@ -318,6 +327,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/infiltration.jpg",
     },
     abandon: {
         subtitle: "Rien",
@@ -326,6 +336,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/abandon.jpg",
     },
     preparation: {
         subtitle: "Préparation au décolage",
@@ -334,6 +345,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('lune')"
         }],
+        img: "assets/images/preparation.webp",
     },
     lune: {
         subtitle: "Succès",
@@ -342,6 +354,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/lune.webp",
     }
 
 };
