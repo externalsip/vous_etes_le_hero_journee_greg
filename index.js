@@ -4,12 +4,13 @@ let chaptersObj = {
 
     introduction: {    
         subtitle: "Introduction",
-        text: "Greg est un être humain normal, il vit seul et travail dans un bureau régulier dans lequel il risque de passer le restant de ses jours, L'histoire dont vous allez témoigner de est l'une des journées banales qui composent sa vie.",
+        text: "Greg est un être humain normal, il vit seul et travail dans un bureau régulier dans lequel il risque de passer le restant de ses jours, L'histoire dont vous allez être témoin est l'une des journées banales qui composent sa vie.",
         options: [continuer = {
             text: "Continuer",
             action: "goToChapter('matin')"
         }],
-        img: "assets/thumbs_up_man2.jpg"},
+        img: "assets/images/introduction.jpg"
+    },
     matin: {
         subtitle: "Matin",
         text: "Greg se réveille, il est prêt à affronter sa journée mais n'est pas certain de ce qu'il devrait faire en cet instant. Que devrait-il faire?",
@@ -23,6 +24,7 @@ let chaptersObj = {
             text: "Partir",
             action: "goToChapter('depart')"
         }],
+        img: "assets/images/matin.jpg",
     },
     nouveau_matin: {
         subtitle: "Prise 2",
@@ -37,6 +39,7 @@ let chaptersObj = {
             text: "Partir",
             action: "goToChapter('depart')"
         }],
+        img: "assets/images/nouveau_matin.jpg",
     },
     wow: {
         subtitle: "wow.",
@@ -45,14 +48,16 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/wow.jpg",
     },
     retard: {
         subtitle: "En retard!!!",
-        text: "Greg décide de se faire à déjeuner, il ouvre son frigo et trouve de quoi manger, il décide de faire des oeufs, Greg est connu pour ses très bons oeufs, malheureusement, le temps qu'il fasse son déjeuner, Greg manque son bus, celui-ci passe à l'heure donc il n'a aucune chance d'arriver à temps à son travail.",
+        text: "Greg décide de se faire à déjeuner, il ouvre son frigo et trouve de quoi manger, il décide de faire des oeufs, Greg est connu pour ses très bons oeufs, malheureusement, le temps qu'il fasse son déjeuner, Greg manque son bus, celui-ci passe à l'heure donc il n'a aucune chance d'arriver à temps à son travail. Au moins les oeufs étaient bons.",
         options: [recommencer = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/retard.jpg",
     },
     depart: {
         subtitle: "En chemin pour le travail",
@@ -61,6 +66,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('bus')"
         }],
+        img: "assets/images/depart.jpg",
     },
     bus: {
         subtitle: "Dans le bus",
@@ -72,6 +78,7 @@ let chaptersObj = {
             text: "Déscendre à l'arrêt habituel",
             action: "goToChapter('accident')",
         }],
+        img: "assets/images/bus.webp",
     },
     accident: {
         subtitle: "Un événement inattendu",
@@ -80,6 +87,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/accident.jpg",
     },
     stop: {
         subtitle: "Une décision questionnable",
@@ -88,6 +96,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('travail')"
         }],
+        img: "assets/images/stop.jpg",
     },
     travail: {
         subtitle: "Arrivé au travail",
@@ -96,6 +105,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('debut_travail')"
         }],
+        img: "assets/images/travail.jpg",
     },
     debut_travail: {
         subtitle: "On repart pour un tour!",      
@@ -104,6 +114,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('deshydratation')"
         }],
+        img: "assets/images/debut_travail.jpg",
     },
     deshydratation: {
         subtitle: "Déshydratation",
@@ -112,6 +123,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('soif')"
         }],
+        img: "assets/images/deshydratation.jpg",
     },
     soif: {
         subtitle: "La grande soif de Greg",
@@ -126,6 +138,7 @@ let chaptersObj = {
             text: "Robinet de la salle d'employés",
             action: "goToChapter('hydratation')"
         }],
+        img: "assets/images/soif.jpg",
     },
     fracture: {
         subtitle: "Fracture",
@@ -134,6 +147,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/fracture.jpg",
     },
     cafe: {
         subtitle: "Trop de caféine",
@@ -142,6 +156,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/cafe.jpg",
     },
     hydratation: {
         subtitle: "Hydratation",
@@ -150,14 +165,16 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('problemes')"
         }],
+        img: "assets/images/hydratation.webp",
     },
     problemes: {
         subtitle: "Problème après problème",
-        text: "Maintenant rendu à la fin de son shift, l'ordinateur de Greg commence à faire des étincelles, d'après l'opinion de Greg, ce n'est pas quelque chose que les ordinateurs font habituellement",
+        text: "Maintenant rendu à la fin de son shift, l'ordinateur de Greg commence à faire des étincelles, d'après l'opinion de Greg, ce n'est pas quelque chose que les ordinateurs font habituellement, sur l'écran une suite de lettres s'affichent: 'asdhjsphuabwsdvnoinvnnadbsd' Greg ne se questionne pas, assumant que c'est un comportement normal pour un ordinateur.",
         options: [continuer = {
             text: "Continuer",
             action: "goToChapter('reparation')"
         }],
+        img: "assets/images/problemes.jpg",
     },
     reparation: {
         subtitle: "Réparation",
@@ -167,11 +184,12 @@ let chaptersObj = {
             action: "goToChapter('explosion')"
         }, ignorer = {
             text: "Ignorer le problème",
-            action: "goToChapter('depart')",
+            action: "goToChapter('clockout')",
         }, coup = {
             text: "Donner un coup de pied",
             action: "goToChapter('bris')"
         }],
+        img: "assets/images/reparation.jpg",
     },
     explosion: {
         subtitle: "???",
@@ -180,6 +198,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/explosion.jpg",
     },
     bris: {
         subtitle: "Un autre problème pour les techniciens",
@@ -188,14 +207,16 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
+        img: "assets/images/bris.jpg",
     },
-    depart: {
+    clockout: {
         subtitle: "Pas mon problème",
         text: "Le Greg d'aujourd'hui en a eu assez, ce problème va être le problème du Greg de demain, Greg part de son bureau, laissant l'ordinateur là.",
         options: [continuer = {
             text: "Continuer",
             action: "goToChapter('incendie')"
         }],
+        img: "assets/images/clockout.jpg",
     },
     incendie: {
         subtitle: "Pas ma faute",
@@ -250,6 +271,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('aprescombat')"
         }],
+        img: "assets/images/combat.jpg",
     },
     aprescombat: {
         subtitle: "Rien ne se passe",
@@ -322,7 +344,6 @@ let chaptersObj = {
         }],
     }
 
-
 };
 
 let chapterTitle = document.querySelector(".chapter");
@@ -339,15 +360,16 @@ function goToChapter(chapterName){
 
         if(chaptersObj[chapterName]["options"][i] != undefined){
 
-        button[i].innerHTML = ((chaptersObj[chapterName]["options"][i].text));
-        button[i].setAttribute("onclick", ((chaptersObj[chapterName]["options"][i].action)));
+            button[i].innerHTML = ((chaptersObj[chapterName]["options"][i].text));
+            button[i].setAttribute("onclick", ((chaptersObj[chapterName]["options"][i].action)));
+            button[i].classList.remove("none");
 
         }
-    else{
+        else{
 
-        button[i].classList.add("none");
+            button[i].classList.add("none");
 
-    }
+        }
     }
 
 
