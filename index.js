@@ -1,4 +1,4 @@
-let check = 0;
+let newDay = false;
 
 let chaptersObj = {
 
@@ -19,7 +19,7 @@ let chaptersObj = {
             action: "goToChapter('retard')"
         }, se_recoucher = {
             text: "Se recoucher",
-            action: "goToChapter('nouveau_matin')",
+            action: "sleep()",
         }, partir = {
             text: "Partir",
             action: "goToChapter('depart')"
@@ -103,7 +103,7 @@ let chaptersObj = {
         text: "Greg arrive un travail, pour une raison qu'il ignore, il y avait un grand trou dans les rambardes du pont sur lequel il a dù marcher.",
         options: [continuer = {
             text: "Continuer",
-            action: "goToChapter('debut_travail')"
+            action: "split()"
         }],
         img: "assets/images/travail.jpg",
     },
@@ -359,12 +359,16 @@ let chaptersObj = {
 
 };
 
+
+
 let chapterTitle = document.querySelector(".chapter");
 let chapterText = document.querySelector(".text");
 let chapterImg = document.querySelector(".photo");
 let button = document.querySelectorAll(".button");
 
 function goToChapter(chapterName){
+
+    if(chapterName == "introduction"){newDay = false;}
 
     chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
     chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
@@ -385,8 +389,31 @@ function goToChapter(chapterName){
         }
     }
 
-
-
 };
 
 goToChapter("introduction");
+
+
+
+function sleep(){
+
+    newDay = true;
+    goToChapter("nouveau_matin");
+
+}
+
+function split(){
+
+    if(newDay == false){
+
+        goToChapter("erreur");
+
+    }
+
+    else{
+
+        goToChapter("debut_travail");
+
+    }
+
+}
