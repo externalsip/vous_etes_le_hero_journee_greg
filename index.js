@@ -105,7 +105,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "split()"
         }],
-        img: "assets/images/travail.jpg",
+        video: "assets/video/travail.mp4",
     },
     debut_travail: {
         subtitle: "On repart pour un tour!",      
@@ -354,12 +354,9 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
-        img: "assets/images/lune.webp",
+        video: "assets/video/lune.mp4",
     }
-
 };
-
-
 
 let chapterTitle = document.querySelector(".chapter");
 let chapterText = document.querySelector(".text");
@@ -367,53 +364,58 @@ let chapterImg = document.querySelector(".image");
 let button = document.querySelectorAll(".button");
 
 function goToChapter(chapterName){
-
     if(chapterName == "introduction"){newDay = false;}
-
-    chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
-    chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
-    chapterImg.innerHTML = "<img class='photo' src='"+ chaptersObj[chapterName]['img']+"'>";
+        chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
+        chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
+    if(chaptersObj[chapterName]['video'] != undefined){
+        chapterImg.innerHTML = "<video src='"+ chaptersObj[chapterName]['video']+"' loop class='video photo'> </video>";
+        let video = document.querySelector(".video");
+        video.play();
+}
+    else{
+        chapterImg.innerHTML = "<img class='photo' src='"+ chaptersObj[chapterName]['img']+"'>";
+    }
     for(let i = 0; i <= 2; i++){
-
         if(chaptersObj[chapterName]["options"][i] != undefined){
-
             button[i].innerHTML = ((chaptersObj[chapterName]["options"][i].text));
             button[i].setAttribute("onclick", ((chaptersObj[chapterName]["options"][i].action)));
             button[i].classList.remove("none");
-
         }
         else{
-
             button[i].classList.add("none");
-
         }
     }
-
 };
 
 goToChapter("introduction");
 
-
-
 function sleep(){
-
     newDay = true;
     goToChapter("nouveau_matin");
-
 }
 
 function split(){
-
     if(newDay == false){
-
         goToChapter("erreur");
-
     }
-
     else{
-
         goToChapter("debut_travail");
-
     }
-
 }
+
+const soundEffect = new Audio('assets/son/chapter_swap.mp3');
+
+function play(){
+    soundEffect.currentTime = 0.5;
+    soundEffect.play();
+};
+
+button[0].addEventListener("click", function(){
+    play();
+});
+button[1].addEventListener("click", function(){
+    play();
+});
+button[2].addEventListener("click", function(){
+    play();
+});
