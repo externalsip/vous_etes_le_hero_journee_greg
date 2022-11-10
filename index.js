@@ -1,4 +1,4 @@
-let newDay = false;
+let newDay = 0;
 
 let chaptersObj = {
 
@@ -364,7 +364,7 @@ let chapterImg = document.querySelector(".image");
 let button = document.querySelectorAll(".button");
 
 function goToChapter(chapterName){
-    if(chapterName == "introduction"){newDay = false;}
+    if(chapterName == "introduction"){newDay = 0;}
         chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
         chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
     if(chaptersObj[chapterName]['video'] != undefined){
@@ -390,12 +390,12 @@ function goToChapter(chapterName){
 goToChapter("introduction");
 
 function sleep(){
-    newDay = true;
+    newDay = 1;
     goToChapter("nouveau_matin");
 }
 
 function split(){
-    if(newDay == false){
+    if(newDay >= 1){
         goToChapter("erreur");
     }
     else{
