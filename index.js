@@ -1,5 +1,8 @@
 let newDay = false;
+if(localStorage.getItem("check") != null){
+    newDay = localStorage.getItem("check");
 
+}
 let chaptersObj = {
 
     introduction: {    
@@ -364,7 +367,11 @@ let chapterImg = document.querySelector(".image");
 let button = document.querySelectorAll(".button");
 
 function goToChapter(chapterName){
-    if(chapterName == "introduction"){newDay = false;}
+    localStorage.setItem("chapter", chapterName);
+    if(chapterName == "introduction"){
+        newDay = false;
+        localStorage.setItem("check", newDay);
+    }
         chapterTitle.innerHTML = (chaptersObj[chapterName]["subtitle"]);
         chapterText.innerHTML = (chaptersObj[chapterName]["text"]);
     if(chaptersObj[chapterName]['video'] != undefined){
@@ -375,7 +382,7 @@ function goToChapter(chapterName){
     else{
         chapterImg.innerHTML = "<img class='photo' src='"+ chaptersObj[chapterName]['img']+"'>";
     }
-    for(let i = 0; i <= button.length; i++){
+    for(let i = 0; i < button.length; i++){
         if(chaptersObj[chapterName]["options"][i] != undefined){
             button[i].innerHTML = ((chaptersObj[chapterName]["options"][i].text));
             button[i].setAttribute("onclick", ((chaptersObj[chapterName]["options"][i].action)));
@@ -387,10 +394,22 @@ function goToChapter(chapterName){
     }
 };
 
-goToChapter("introduction");
+
+if(localStorage.getItem("chapter") != null){
+
+    goToChapter(localStorage.getItem("chapter"));
+
+}
+else{
+    goToChapter("introduction");
+}
+
+
+
 
 function sleep(){
     newDay = true;
+    localStorage.setItem("check", newDay);
     goToChapter("nouveau_matin");
 }
 
@@ -410,10 +429,10 @@ function play(){
     soundEffect.play();
 };
 
-for(let i = 0; i <= button.length; i++){
+for(let i = 0; i < button.length; i++){
 
-    button[i].addEventListener("click", function(){
-        play();
-    });
+button[i].addEventListener("click", function(){
+    play();
+});
 
 }
