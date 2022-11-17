@@ -1,6 +1,6 @@
 let newDay = false;
 if(localStorage.getItem("check") != null){
-    newDay = localStorage.getItem("check");
+    newDay = Boolean(localStorage.getItem("check"));
 
 }
 let chaptersObj = {
