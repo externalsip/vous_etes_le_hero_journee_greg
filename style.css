@@ -115,3 +115,33 @@ background-color:#A9CFC7
     justify-content: center;
 
 }
+
+.reset{
+
+    align-self: center;
+
+    margin-top: 10px;
+}
+
+#son{
+
+    align-self: flex-start;
+
+}
+
+.sound_label{
+    width:10%;
+    background-color: #fff;
+    padding:5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:#d0fef5 ;
+    border:black solid 2px;
+    color:#007ea7;
+}
+
+.sound_label:hover{
+
+    background-color:#A9CFC7
+
+}

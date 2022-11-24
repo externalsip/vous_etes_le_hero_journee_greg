@@ -364,7 +364,9 @@ let chaptersObj = {
 let chapterTitle = document.querySelector(".chapter");
 let chapterText = document.querySelector(".text");
 let chapterImg = document.querySelector(".image");
-let button = document.querySelectorAll(".button");
+let btn_wrapper = document.querySelector(".button_wrapper");
+let button = btn_wrapper.querySelectorAll(".button");
+let reset = document.querySelector(".reset");
 
 function goToChapter(chapterName){
     localStorage.setItem("chapter", chapterName);
@@ -394,7 +396,6 @@ function goToChapter(chapterName){
     }
 };
 
-
 if(localStorage.getItem("chapter") != null){
 
     goToChapter(localStorage.getItem("chapter"));
@@ -403,9 +404,6 @@ if(localStorage.getItem("chapter") != null){
 else{
     goToChapter("introduction");
 }
-
-
-
 
 function sleep(){
     newDay = true;
@@ -422,9 +420,22 @@ function split(){
     }
 }
 
+let audio_check = document.getElementById("son");
+
 const soundEffect = new Audio('assets/son/chapter_swap.mp3');
 
+
+
 function play(){
+    if(audio_check.checked == false){
+    
+        soundEffect.volume = 0;
+
+}
+    else{
+        soundEffect.volume = 1;
+
+}
     soundEffect.currentTime = 0.5;
     soundEffect.play();
 };
@@ -436,3 +447,9 @@ button[i].addEventListener("click", function(){
 });
 
 }
+
+reset.addEventListener("click", function(){
+
+    goToChapter("introduction");
+
+});
