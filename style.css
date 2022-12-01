@@ -3,130 +3,87 @@
 }
 
 body{
-
     background-color:#2f195f ;
     display:flex;
     justify-content: center;
     align-items: center;
     height:100vh;
     overflow:hidden;
+    transform:rotate(0deg);
 }
 
 .game{
-
     display:flex;
-
     flex-direction: column;
-
     width:900px;
-
     min-height: 100px;
-    
     background-color:#5603ad ;
-
     justify-content: center;
-
     padding:10px;
-
 }
 
 .title{
-
     font-size: 3em;
-
     font-family: Indie Flower;
-
     color:#bcb6ff;
-
     align-self: center;
-
 }
 
 .chapter{
-
     font-size: 2em;
-    
     color:#bcb6ff;
-
     align-self: center;
 }
 
 .text{
-
     color:#bcb6ff;
-
     font-size:1em;
-
 }
 
 .photo{
-
     width:100%;
-
-
 }
 
 .button_wrapper{
-
     width:100%;
-
     align-self: stretch;
-
     display:flex;
-
     justify-content: space-evenly;
-
     align-items: flex-start;
-
 }
 
 .button{
-
     width:25%;
-
     color:#007ea7;
-
     font-size:1em;
-
     background-color:#d0fef5 ;
-
     border-radius: 10px;
 }
 
 .button:hover{
-
-background-color:#A9CFC7
-
+    background-color:#A9CFC7
 }
 
 .none{
-
     display:none;
-
 }
 
 .image{
-
     height:100%;
     max-height:600px;
     aspect-ratio: 1;
     padding: 10px 0px;
     display: flex;
     justify-content: center;
-
 }
 
 .reset{
-
     align-self: center;
-
     margin-top: 10px;
 }
 
 #son{
-
     align-self: flex-start;
-
 }
 
 .sound_label{
@@ -141,7 +98,61 @@ background-color:#A9CFC7
 }
 
 .sound_label:hover{
-
     background-color:#A9CFC7
+}
+body.lune{
 
+    background-image: url(assets/images/space_background.jpg);
+    background-size: 100%;
+
+}
+.lune > .game{
+    background-color:#0b325e;
+    transition-duration: 0.5s;
+}
+.lune > .game > .title{
+    color:#d9c62c;
+    transition-duration: 0.5s;
+}
+.lune > .game > .chapter{
+    color:#d9c62c;
+    transition-duration: 0.5s;
+}
+.lune > .game > .text{
+    color:#d9c62c;
+    transition-duration: 0.5s;
+}
+.lune > .game > .button_wrapper > .button{
+    background-color: #40078f;
+    transition-duration: 0.5s;
+}
+
+.lune > .game > .button{
+    background-color: #40078f;
+    transition-duration: 0.5s;
+}
+
+.lune > .game > .sound_label{
+    background-color: #40078f;
+    transition-duration: 0.5s;
+}
+
+.lune > .game > .button:hover{
+    background-color: #3d0c80;
+}
+.lune > .game > .button_wrapper > .button:hover{
+    background-color: #3d0c80;
+}
+.lune > .game > .sound_label:hover{
+    background-color: #3d0c80;
+}
+
+.accident > .game{
+    width:800px;
+    padding:70px;
+    transition-duration: 0.5s;
+   transform:rotate(-140deg);
+}
+body.accident{
+    background-image: linear-gradient(to bottom, #5f25dd, #240a49);
 }

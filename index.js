@@ -394,6 +394,12 @@ function goToChapter(chapterName){
             button[i].classList.add("none");
         }
     }
+    if(document.body.classList.length <= 1){
+        document.body.removeAttribute("class");
+    }
+
+    document.body.classList.add(chapterName);
+
 };
 
 if(localStorage.getItem("chapter") != null){
