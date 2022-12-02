@@ -366,7 +366,8 @@ let chaptersObj = {
         options: [{
             text: "Retour au départ",
             action: "goToChapter('introduction')"
-        }]
+        }],
+        img: "assets/images/secret.jpg",
     }
 };
 
