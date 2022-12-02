@@ -9,6 +9,8 @@ __Inspiration:__ [Kyle is Famous](https://store.steampowered.com/app/1186740/Kyl
 
 __Palette de Couleurs:__ [coolors.co](https://coolors.co/d0fef5-bcbff6-007ea7-5603ad-2f195f)
 
+__En ligne:__ [lien vers projet](https://externalsip.github.io/vous_etes_le_hero_journee_greg/)
+
 ## Diagramme
 
 <img src="assets/alariebrousseau_jacob_hero_flowchart_sansinfo_582_324MO.png">
