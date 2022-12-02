@@ -17,9 +17,11 @@ body{
     flex-direction: column;
     width:900px;
     min-height: 100px;
+    max-height: 900px;
     background-color:#5603ad ;
     justify-content: center;
     padding:10px;
+    border-radius:10px;
 }
 
 .title{
@@ -70,7 +72,7 @@ body{
 
 .image{
     height:100%;
-    max-height:600px;
+    max-height:500px;
     aspect-ratio: 1;
     padding: 10px 0px;
     display: flex;
@@ -106,53 +108,49 @@ body.lune{
     background-size: 100%;
 
 }
-.lune > .game{
+.lune .game{
     background-color:#0b325e;
     transition-duration: 0.5s;
 }
-.lune > .game > .title{
+.lune .title{
     color:#d9c62c;
     transition-duration: 0.5s;
 }
-.lune > .game > .chapter{
+.lune .chapter{
     color:#d9c62c;
     transition-duration: 0.5s;
 }
-.lune > .game > .text{
+.lune .text{
     color:#d9c62c;
     transition-duration: 0.5s;
 }
-.lune > .game > .button_wrapper > .button{
+.lune .button{
     background-color: #40078f;
     transition-duration: 0.5s;
 }
 
-.lune > .game > .button{
+.lune .sound_label{
     background-color: #40078f;
     transition-duration: 0.5s;
 }
 
-.lune > .game > .sound_label{
-    background-color: #40078f;
-    transition-duration: 0.5s;
-}
-
-.lune > .game > .button:hover{
-    background-color: #3d0c80;
-}
-.lune > .game > .button_wrapper > .button:hover{
-    background-color: #3d0c80;
-}
-.lune > .game > .sound_label:hover{
+.lune  .button:hover{
     background-color: #3d0c80;
 }
 
-.accident > .game{
+.lune .sound_label:hover{
+    background-color: #3d0c80;
+}
+
+.accident .game{
     width:800px;
     padding:70px;
     transition-duration: 0.5s;
    transform:rotate(-140deg);
 }
 body.accident{
-    background-image: linear-gradient(to bottom, #5f25dd, #240a49);
+    background-image: linear-gradient(to bottom, #2f195f, #240a49);
+}
+body.nouveau_matin{
+    background-image: linear-gradient(to top left, #2f195f, #f2b31f);
 }

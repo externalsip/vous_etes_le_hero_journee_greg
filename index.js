@@ -27,7 +27,7 @@ let chaptersObj = {
             text: "Partir",
             action: "goToChapter('depart')"
         }],
-        img: "assets/images/matin.jpg",
+        video: "assets/video/matin.mp4",
     },
     nouveau_matin: {
         subtitle: "Prise 2",
@@ -150,7 +150,7 @@ let chaptersObj = {
             text: "Recommencer",
             action: "goToChapter('introduction')"
         }],
-        img: "assets/images/fracture.jpg",
+        video: "assets/video/fracture.mp4",
     },
     cafe: {
         subtitle: "Trop de caféine",
@@ -348,7 +348,7 @@ let chaptersObj = {
             text: "Continuer",
             action: "goToChapter('lune')"
         }],
-        img: "assets/images/preparation.webp",
+        video: "assets/video/preparation.mp4",
     },
     lune: {
         subtitle: "Succès",
@@ -358,6 +358,15 @@ let chaptersObj = {
             action: "goToChapter('introduction')"
         }],
         video: "assets/video/lune.mp4",
+    },
+    //Boring :(
+    asdhjsphuabwsdvnoinvnnadbsd:{
+        subtitle: "Secret!!!",
+        text:"Félicitation, vous avez trouvé le chapitre secret! Si vous êtes ici, c'est que vous êtes prêt à apprendre les secrets de Greg, pourquoi agit-il de cette manière, et pourquoi est-ce que ses actions sont vues comme normales par les autres ? C'est simple, Greg n'est par réelement humain, on pourrait dire qu'il est un imposteur, tous autours de lui perçoivent ses actions comme normales grâce à des illusions. Pourquoi il est là ? Aucune idée.",
+        options: [{
+            text: "Retour au départ",
+            action: "goToChapter('introduction')"
+        }]
     }
 };
 
@@ -419,10 +428,10 @@ function sleep(){
 
 function split(){
     if(newDay == true){
-        goToChapter("erreur");
+        goToChapter("debut_travail");
     }
     else{
-        goToChapter("debut_travail");
+        goToChapter("erreur");
     }
 }
 
@@ -439,7 +448,7 @@ function play(){
 
 }
     else{
-        soundEffect.volume = 1;
+        soundEffect.volume = 0.3;
 
 }
     soundEffect.currentTime = 0.5;
