@@ -8,6 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height:100vh;
+    padding:50px;
     overflow:hidden;
     transform:rotate(0deg);
 }
@@ -17,7 +18,7 @@ body{
     flex-direction: column;
     width:900px;
     min-height: 100px;
-    max-height: 700px;
+    max-height:100vh;
     background-color:#5603ad ;
     justify-content: center;
     padding:10px;
@@ -52,6 +53,7 @@ body{
     display:flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    padding:5px;
 }
 
 .button{
@@ -60,6 +62,7 @@ body{
     font-size:1em;
     background-color:#d0fef5 ;
     border-radius: 10px;
+
 }
 
 .button:hover{
@@ -72,9 +75,8 @@ body{
 
 .image{
     height:100%;
-    max-height:400px;
+    max-height:350px;
     aspect-ratio: 1;
-    padding: 10px 0px;
     display: flex;
     justify-content: center;
 }
@@ -85,18 +87,19 @@ body{
 }
 
 #son{
-    align-self: flex-start;
+    align-self: center;
 }
 
 .sound_label{
+    display: flex;
     width:10%;
-    background-color: #fff;
-    padding:5px;
     text-align: center;
     border-radius: 10px;
     background-color:#d0fef5 ;
     border:black solid 2px;
     color:#007ea7;
+    align-items: center;
+    justify-content: center;
 }
 
 .sound_label:hover{
